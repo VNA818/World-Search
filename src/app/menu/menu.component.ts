@@ -14,11 +14,11 @@ export class MenuComponent implements OnInit {
   }
 
   about() {
-    window.open("https://github.com/VNA818/VNA818.github.io/tree/main/world-search/README.md", '_blank');
+    window.open("https://github.com/VNA818/world-search/blob/main/README.md", '_blank');
   }
 
   repo () {
-    window.open("https://github.com/VNA818/VNA818.github.io/tree/main/world-search/", '_blank');
+    window.open("https://github.com/VNA818/world-search", '_blank');
   }
 
   ngOnInit(): void {
