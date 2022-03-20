@@ -7,7 +7,7 @@
 }
 
 ::ng-deep #logo {
-	color: var(--primary-color);
+	color: white;
 	font-family: segoe ui;
 	font-weight: bold;
 	font-size: 1.3em;
