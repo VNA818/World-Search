@@ -18,7 +18,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
   ## Build
 
-  Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  Run `ng build --output-path docs --base-href /world-search/` to build the project. The build artifacts will be stored in the `docs/` directory.
 
   ## Running unit tests
 

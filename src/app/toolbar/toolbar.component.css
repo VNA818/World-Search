@@ -1,14 +1,38 @@
-#history {
+#cs {
 	margin-left: auto;
+}
+
+#menu {
+	margin-right: 2.5px;
+}
+
+#streak {
+	margin-right: 10px;
+	cursor: pointer;
 }
 
 ::ng-deep .mat-toolbar {
     background-color: #222222 !important; 
 }
 
-::ng-deep #logo {
-	color: white;
-	font-family: segoe ui;
+::ng-deep #streak {
+	background-color: var(--primary-color);
+}
+
+#streak-value {
 	font-weight: bold;
-	font-size: 1.3em;
+}
+
+.logo {
+	background-image: url("/assets/images/logo.jpg");
+	width: 200px;
+	min-height: 40px;
+	background-size: contain;
+	background-position: left;
+}
+
+@media only screen and (max-width: 500px) {
+	#streak-title {
+		display: none;
+	}
 }

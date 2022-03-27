@@ -18,6 +18,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MenuComponent } from './menu/menu.component';
+import { MatChipsModule } from '@angular/material/chips'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MenuComponent } from './menu/menu.component';
   MatSnackBarModule,
   MatSidenavModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

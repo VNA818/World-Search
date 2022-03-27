@@ -22,6 +22,7 @@ export class AppComponent {
   locationNumber: number = -1;
   historyData: Array<any> = [];
   distance: number = -1;
+  streak: number = 0;
 
   constructor (private game: GameService) {}
 
@@ -45,6 +46,15 @@ export class AppComponent {
     this.runGame(this.game.shareDecode(id), [], [], -1);
   }
 
+  async addStreak(actual: Array<number>, guess: Array<number>) {
+    const result = await this.game.streak(actual, guess)
+    if(await result == true) {
+      this.streak += 1;
+    } else if(await result == false){
+      this.streak = 0;
+    }
+  }
+
   historyLoad(num: number) {
     let current = this.historyData[num];
     this.runGame(current.number, current.guess, current.target, current.distance);
@@ -57,6 +67,7 @@ export class AppComponent {
   }
 
   updateHistory() {
+    this.addStreak(this.currentLocation, this.selectedLocation);
     var now = new Date();
     this.historyData = [...this.historyData, {
       target: this.currentLocation,
@@ -121,6 +132,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit(): void {
+    this.streak = 0;
     let param = this.game.getParams('share');
     if(param != null) {
       this.shareLoad(param);

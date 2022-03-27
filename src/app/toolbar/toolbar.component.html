@@ -2,7 +2,15 @@
 	<button mat-icon-button id="menu" (click)="menuClick()">
 		<mat-icon color="primary">menu</mat-icon>
 	</button>
-	<span id="logo">World🌎Search</span>
+	<div class="logo"></div>
+	<span id="cs">
+		<mat-chip-list>
+			<mat-chip mat-mini-fab color="primary" id="streak" (click)="streakClick()" title="Country Streak">
+				<span id="streak-title">Country Streak:&nbsp;</span>
+				<span id="streak-value">{{streak}}</span>
+			</mat-chip>
+		</mat-chip-list>
+	</span>
 	<button mat-icon-button id="history" (click)="historyClick()">
 		<mat-icon color="accent">history</mat-icon>
 	</button>
