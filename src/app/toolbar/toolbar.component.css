@@ -24,7 +24,7 @@
 }
 
 .logo {
-	background-image: url("/assets/images/logo.jpg");
+	background-image: url("/./assets/images/logo.jpg");
 	width: 200px;
 	min-height: 40px;
 	background-size: contain;
