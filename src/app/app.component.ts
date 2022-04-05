@@ -27,7 +27,14 @@ export class AppComponent {
   constructor (private game: GameService) {}
 
   newLocation() {
-    this.runGame();
+    if(this.streak > 0 && this.distance == -1) {
+      if (confirm("Are you sure? You will lose your streak.")) {
+        this.streak = 0;
+        this.runGame();
+      }
+    } else {
+      this.runGame();
+    }
   }
 
   rth() {
@@ -109,7 +116,7 @@ export class AppComponent {
     if(num == -1 && cL.length == 0) { //normal game
       this.map.initMap();
       let current = this.game.randomLocation();
-      if(this.searchHistory([current[0], current[1]])){
+      if(this.searchHistory([current[0], current[1]])) {
         this.currentLocation[0] = current[0];
         this.currentLocation[1] = current[1];
         this.locationNumber = current[2];

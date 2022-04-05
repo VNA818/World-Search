@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, EventEmitter, Output, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
