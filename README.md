@@ -2,6 +2,8 @@
 
 World Search is a online geographic discovery game inspired by the online game GeoGuessr. Made with Angular, Google maps API, and Angular Material UI.  
 
+Note: A lot of this code was written whe nI was still learning frontend development, meaning there are some poor choices made. I 'm hoping to improve the code in the near future!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
 <details>
